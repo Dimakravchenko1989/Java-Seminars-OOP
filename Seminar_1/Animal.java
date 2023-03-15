@@ -1,14 +1,17 @@
 package Seminar_1;
 
-public class Animal {
+public abstract class Animal {
     private String name;
     private String color;
     private int pawsCount;
+
+    private static int animalsCount = 0;
 
     public Animal(String name, String color, int pawsCount) {
         this.name = name;
         this.color = color;
         this.pawsCount = pawsCount;
+        animalsCount++;
     }
 
     public Animal(String name) {
@@ -21,7 +24,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return String.format("Имя: %s, Цвет: %s", this.name, this.color);
+        return String.format(":Животное %s, Имя: %s, Цвет: %s", this.getType(), this.name, this.color);
     }
 
     public String getType() {
@@ -52,7 +55,11 @@ public class Animal {
         this.pawsCount = pawsCount;
     }
 
-    public void speak() {
-        System.out.println("Yarr!!");
+    public static int getAnimalsCount() {
+        return animalsCount;
     }
+
+    public abstract void speak();
+
+    public abstract void hunt();
 }
