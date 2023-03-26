@@ -9,8 +9,8 @@ public class Main {
         gbList.add(2);
         gbList.add(1);
         gbList.add(3);
-        // System.out.println(gbList.size());
-        // System.out.println(gbList.get(0));
+        System.out.println(gbList.size());
+        System.out.println(gbList.get(0));
         gbList.remove(2);
         
         for (Integer integer : gbList) {

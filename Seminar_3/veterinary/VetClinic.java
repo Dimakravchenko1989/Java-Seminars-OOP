@@ -1,4 +1,4 @@
-package veterinary;
+package Seminar_3.veterinary;
 
 import Seminar_1.Animal;
 
